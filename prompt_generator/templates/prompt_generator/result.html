@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prompt Generator Results</title>
+</head>
+<body>
+    <h1>Prompt Generator Results</h1>
+
+    {% for prompt in prompts %}
+        <p>{{ prompt }}</p>
+    {% endfor %}
+
+    <a href="/generate/">Generate more prompts</a>
+</body>
+</html>
