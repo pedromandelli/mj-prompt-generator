@@ -1,5 +1,20 @@
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Generate Prompt</button>
-</form>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Midjourney Prompts</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Generate a Midjourney Prompt</h1>
+        <form method="post" class="mt-4">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="userInput">Describe the image you want:</label>
+                {{ form.user_input }}
+            </div>
+            <button type="submit" class="btn btn-primary">Generate Prompt</button>
+        </form>
+    </div>
+</body>
+</html>

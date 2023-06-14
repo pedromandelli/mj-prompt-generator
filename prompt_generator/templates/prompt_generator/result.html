@@ -2,14 +2,21 @@
 <html>
 <head>
     <title>Prompt Generator Results</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
 <body>
-    <h1>Prompt Generator Results</h1>
+    <div class="container">
+        <h1 class="mt-5">Prompt Generator Results</h1>
 
-    {% for prompt in prompts %}
-        <p>{{ prompt }}</p>
-    {% endfor %}
+        {% for prompt in prompts %}
+            <div class="card mt-4">
+                <div class="card-body">
+                    {{ prompt }}
+                </div>
+            </div>
+        {% endfor %}
 
-    <a href="/generate/">Generate more prompts</a>
+        <a href="/generate/" class="btn btn-primary mt-5">Generate more prompts</a>
+    </div>
 </body>
 </html>
