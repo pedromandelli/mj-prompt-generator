@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Generate Midjourney Prompts</title>
+    <title>Prompt Generator</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        .input-form {
+            width: 100%;
+            height: 150px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="mt-5">Generate a Midjourney Prompt</h1>
-        <form method="post" class="mt-4">
+        <h1 class="mt-5">Midjourney Prompt Generator</h1>
+        <h3 class="mt-4">Describe the image you want:</h3>
+
+        <form method="post">
             {% csrf_token %}
-            <div class="form-group">
-                <label for="userInput">Describe the image you want:</label>
-                {{ form.user_input }}
-            </div>
-            <button type="submit" class="btn btn-primary">Generate Prompt</button>
+            <textarea name="user_input" class="input-form form-control mt-3"></textarea>
+            <button type="submit" class="btn btn-primary mt-3">Generate Prompt</button>
         </form>
     </div>
 </body>
