@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Prompt Generator Results</title>
+    <title>Resultados do gerador de prompts</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
 <body>
     <div class="container">
-        <h1 class="mt-5">Prompt Generator Results</h1>
+        <h1 class="mt-5">Prompts gerados</h1>
 
         {% for prompt in prompts %}
             <div class="card mt-4">
@@ -16,7 +16,7 @@
             </div>
         {% endfor %}
 
-        <a href="/generate/" class="btn btn-primary mt-5">Generate more prompts</a>
+        <a href="/generate/" class="btn btn-primary mt-5">Gerar mais prompts</a>
     </div>
 </body>
 </html>
