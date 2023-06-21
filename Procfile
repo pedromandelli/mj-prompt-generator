@@ -1,1 +1,1 @@
-web: gunicorn mj_prompts.wsgi --log-file -
+web: gunicorn django_app.wsgi --log-file -
